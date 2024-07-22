@@ -9,9 +9,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #121212;
   color: #e0e0e0;
+  padding: 20px;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 800px;
-  width: 90%;
+  width: 100%;
 }
 
 .profile-pic-container {
@@ -39,7 +40,7 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   margin-bottom: 25px;
 }
 
