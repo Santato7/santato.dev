@@ -168,6 +168,30 @@ a:hover {
   color: var(--accent);
 }
 
+.btn--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  line-height: 0;
+}
+
+.icon {
+  display: block;
+}
+
+.icon-moon {
+  display: none;
+}
+
+html[data-theme="light"] .icon-sun {
+  display: none;
+}
+
+html[data-theme="light"] .icon-moon {
+  display: block;
+}
+
 .terminal__body {
   padding: 24px 28px 8px;
   font-size: 15px;

@@ -35,11 +35,20 @@
     }, CURSOR_BLINK_MS);
   }
 
+  function setThemeToggleLabel(currentTheme) {
+    const targetTheme = currentTheme === "light" ? "dark" : "light";
+    const label = targetTheme === "light" ? "Alternar para tema claro" : "Alternar para tema escuro";
+    themeToggleEl.setAttribute("aria-label", label);
+  }
+
   function initThemeToggle() {
+    setThemeToggleLabel(document.documentElement.dataset.theme || "dark");
+
     themeToggleEl.addEventListener("click", () => {
       const isLight = document.documentElement.dataset.theme === "light";
-      document.documentElement.dataset.theme = isLight ? "dark" : "light";
-      themeToggleEl.textContent = isLight ? "light" : "dark";
+      const nextTheme = isLight ? "dark" : "light";
+      document.documentElement.dataset.theme = nextTheme;
+      setThemeToggleLabel(nextTheme);
     });
   }
 
