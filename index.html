@@ -6,27 +6,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lucas Santato - Desenvolvedor de Software</title>
   <link rel="icon" type="image/x-icon" href="/img/selfie-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
 </head>
 
 <body>
-  <div class="container">
-    <div class="profile-pic-container">
-      <img src="img/selfie.png" alt="Lucas Santato" class="profile-pic">
+  <div class="terminal">
+    <div class="terminal__titlebar">
+      <div class="terminal__dots">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+      </div>
+      <div class="terminal__label">lucas@santato: ~</div>
+      <div class="terminal__controls">
+        <a class="btn btn--accent" href="files/Lucas_Santato.pdf" download="Lucas_Santato_Curriculo.pdf">↓ currículo</a>
+        <button class="btn btn--dim" id="theme-toggle" type="button">light</button>
+      </div>
     </div>
-    <div class="content">
-      <h1>Hey, Lucas Santato aqui 👋</h1>
-      <p>Sou Desenvolvedor de Software e desde 2022, tenho trabalhado para transformar ideias em soluções práticas.</p>
-      <p>Sinta-se livre para me contatar através dos links a seguir ou por e-mail. Estou ansioso para conectar e explorar como podemos colaborar para alcançar seus objetivos!</p>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/lucassantato" target="_blank"><i class="fab fa-linkedin"></i> Veja meu perfil do LinkedIn</a>
-        <a href="https://github.com/santato7" target="_blank"><i class="fab fa-github"></i> Veja meu perfil do GitHub</a>
-        <a href="mailto:lucas@santato.dev"><i class="fas fa-envelope"></i> lucas@santato.dev</a>
+
+    <div class="terminal__body">
+      <div class="intro">
+        <span class="accent">lucas@santato</span><span class="dim">:~$</span>
+        <span class="intro__typed" id="typed-text"></span><span class="cursor cursor--blink" id="intro-cursor">▋</span>
+      </div>
+
+      <div class="rest" id="rest" hidden>
+        <section class="section" aria-label="about">
+          <h1 class="name">Lucas Santato</h1>
+          <div class="subtitle dim">Desenvolvedor de Software</div>
+          <p class="bio">
+            Construo sistemas backend robustos e produtos que precisam funcionar de verdade — de APIs em NestJS a
+            bancos de dados relacionais que aguentam carga real. Gosto de código simples, direto, e de resolver o
+            problema certo.
+          </p>
+          <div class="contact">
+            <a href="mailto:lucas@santato.dev">lucas@santato.dev</a>
+            <span class="dim">·</span>
+            <a href="https://github.com/santato7" target="_blank" rel="noopener">github.com/santato7</a>
+            <span class="dim">·</span>
+            <a href="https://linkedin.com/in/lucassantato" target="_blank" rel="noopener">linkedin.com/in/lucassantato</a>
+          </div>
+        </section>
+
+        <section class="section" aria-label="skills">
+          <div class="cmd"><span class="accent">lucas@santato</span><span class="dim">:~$</span> ls skills/</div>
+          <div class="skills">
+            <span class="chip">Ruby</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">NestJS</span>
+            <span class="chip">Delphi</span>
+            <span class="chip">SQL</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">Oracle</span>
+          </div>
+        </section>
+
+        <section class="section" aria-label="experience">
+          <div class="cmd"><span class="accent">lucas@santato</span><span class="dim">:~$</span> cat experience.log</div>
+          <div class="experience">
+            <article class="job">
+              <div class="job__row">
+                <span class="job__role">Desenvolvedor de Software</span>
+                <span class="job__period dim">nov 2025 — presente</span>
+              </div>
+              <div class="job__company accent">Instituto Teológico Renascer</div>
+              <p class="job__desc">
+                Único desenvolvedor responsável por todo o ecossistema tecnológico: ERP e microsserviços em Delphi
+                (Horse) e NestJS, mensageria com RabbitMQ, chatbots e automações com n8n, infraestrutura em
+                Docker/Linux, e sustentação de sites em React.
+              </p>
+            </article>
+            <article class="job">
+              <div class="job__row">
+                <span class="job__role">Desenvolvedor Back-end</span>
+                <span class="job__period dim">fev 2025 — out 2025</span>
+              </div>
+              <div class="job__company accent">Leadfy Imob</div>
+              <p class="job__desc">
+                Backend em Ruby e NestJS para centralização de leads; agente de vendas com IA (Selly IA) em Python;
+                ambientes orquestrados com Docker e Kubernetes.
+              </p>
+            </article>
+            <article class="job">
+              <div class="job__row">
+                <span class="job__role">Desenvolvedor de Software</span>
+                <span class="job__period dim">nov 2023 — out 2024</span>
+              </div>
+              <div class="job__company accent">TI Gestor Software</div>
+              <p class="job__desc">
+                Migração de ERP e gestão imobiliária desktop para web; APIs RESTful em NodeJS/NestJS/TypeScript;
+                manutenção do sistema em Delphi com Firebird SQL e PostgreSQL.
+              </p>
+            </article>
+            <article class="job">
+              <div class="job__row">
+                <span class="job__role">Desenvolvedor Fullstack</span>
+                <span class="job__period dim">nov 2023 — fev 2024</span>
+              </div>
+              <div class="job__company accent">JAP Tech</div>
+              <p class="job__desc">
+                PWA em JavaScript/TypeScript com ReactJS e Material UI, backend em NestJS, mensageria com RabbitMQ,
+                deploy em AWS com Docker.
+              </p>
+            </article>
+            <article class="job">
+              <div class="job__row">
+                <span class="job__role">Programador de Sistemas</span>
+                <span class="job__period dim">jun 2022 — mai 2023</span>
+              </div>
+              <div class="job__company accent">Idealsis</div>
+              <p class="job__desc">
+                Desenvolvimento e manutenção de sistema desktop ERP em Delphi com Firebird SQL.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span>lucas@santato:~$ <span class="cursor" id="footer-cursor">▋</span></span>
+          <span>© 2026</span>
+        </footer>
       </div>
     </div>
   </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
