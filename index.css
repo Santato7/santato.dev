@@ -109,6 +109,7 @@ a:hover {
 .terminal__dots {
   display: flex;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .dot {
@@ -131,16 +132,21 @@ a:hover {
 
 .terminal__label {
   flex: 1;
+  min-width: 0;
   text-align: center;
   font-size: 12px;
   color: var(--dim);
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .terminal__controls {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .btn {
@@ -151,6 +157,7 @@ a:hover {
   padding: 4px 10px;
   border-radius: 4px;
   cursor: pointer;
+  white-space: nowrap;
   text-decoration: none;
   transition: border-color 0.2s, color 0.2s;
 }
@@ -322,4 +329,19 @@ html[data-theme="light"] .icon-moon {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+@media (max-width: 400px) {
+  .terminal__titlebar {
+    gap: 8px;
+    padding: 8px 10px;
+  }
+
+  .terminal__controls {
+    gap: 6px;
+  }
+
+  .btn {
+    padding: 4px 8px;
+  }
 }
